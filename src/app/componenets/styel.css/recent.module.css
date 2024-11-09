@@ -1,0 +1,63 @@
+/* Container for the RecentPost section */
+.recentContainer {
+    background-color: var(--recentBackground);
+    margin: 66px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .recentContainer {
+      height: 502px;
+    }
+  }
+  
+  /* Main content container */
+  .contentContainer {
+    width: 92%;
+    max-width: 1030px;
+    padding: 1.5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Header section */
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .headerTitle {
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  
+  .homeLink {
+    font-size: 22px;
+    color: #f98585;
+    margin-right: 10px;
+  }
+  
+  /* Posts container */
+  .postsContainer {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  @media (min-width: 768px) {
+    .postsContainer {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    
+  }
+  

@@ -1,0 +1,38 @@
+
+.footerContainer {
+    background-color: var(--footerBackground);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 243px;
+    padding: 1rem;
+    /* space-between: 1.5rem; */
+  }
+  
+  /* Social media link container */
+  .socialLinks {
+    display: flex;
+    gap: 1.25rem;
+  }
+  
+  /* Icon styling */
+  .icon {
+    width: 30px;
+    height: 30px;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: var(--myPink); /* hover effect */
+  }
+  
+  /* Copyright text */
+  .copyrightText {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  

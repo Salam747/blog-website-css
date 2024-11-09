@@ -2,75 +2,72 @@
 import React from "react";
 import { Heebo } from "next/font/google";
 import Link from "next/link";
+import styles from "../componenets/styel.css/contact.module.css"; // Import the CSS module
+
 const heebo = Heebo({ subsets: ["latin"] });
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full md:w-[483px] h-auto bg-white flex items-center mx-auto my-16">
-      <div className="m-auto p-4 w-[80%] md:w-[391px] h-auto flex flex-col items-start justify-evenly">
-        <div className="flex justify-between items-center w-full mb-4">
-          <h2 className={`${heebo.className} font-bold text-[20px] md:text-[26px]`}>Contact Me</h2>
-          <Link href="/" className={`${heebo.className} text-myPink text-[14px] md:text-[18px]`}>
+    <div id="contact" className={styles.contactContainer}>
+      <div className={styles.formWrapper}>
+        <div className={styles.header}>
+          <h2 className={`${heebo.className} ${styles.contactTitle}`}>Contact Me</h2>
+          <Link href="/" className={styles.homeLink}>
             Home
           </Link>
         </div>
         <form
           target="_blank"
-          action="https://formspree.io/f/movqeqwj"
-          method="POST"
-          className="w-full"
+          className={styles.contactForm}
         >
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+          <div className={styles.formGroup}>
+            <label htmlFor="name" className={styles.formLabel}>
               Name
             </label>
             <input
               type="text"
               id="name"
               name="name"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className={styles.formInput}
               required
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+          <div className={styles.formGroup}>
+            <label htmlFor="email" className={styles.formLabel}>
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className={styles.formInput}
               required
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="subject" className="block text-gray-700 text-sm font-bold mb-2">
+          <div className={styles.formGroup}>
+            <label htmlFor="subject" className={styles.formLabel}>
               Subject
             </label>
             <input
               type="text"
               id="subject"
               name="subject"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className={styles.formInput}
               required
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
+          <div className={styles.formGroup}>
+            <label htmlFor="message" className={styles.formLabel}>
               Message
             </label>
             <textarea
               id="message"
               name="message"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+              className={styles.formTextarea}
               required
             />
           </div>
-          <button
-            type="submit"
-            className="bg-myPink text-white font-bold py-2 px-4 rounded shadow-md shadow-black/45 focus:outline-none focus:shadow-outline"
-          >
+          <button type="submit" className={styles.submitBtn}>
             Send Message
           </button>
         </form>

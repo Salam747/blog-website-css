@@ -3,27 +3,28 @@ import { FaFacebookSquare, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import React from "react";
 import Link from "next/link";
+import styles from "../componenets/styel.css/footer.module.css"; 
 
 const heebo = Heebo({ subsets: ["latin"] });
 
 const Footer = () => {
   return (
-    <div className="bg-footerBackground space-y-6 flex flex-col items-center justify-center h-[243px]">
-      <div className="flex space-x-5">
+    <div className={styles.footerContainer}>
+      <div className={styles.socialLinks}>
         <Link href={""}>
-          <FaFacebookSquare className="w-[30px] h-[30px]" />
+          <FaFacebookSquare className={styles.icon} />
         </Link>
         <Link href={""}>
-          <FaInstagram className="w-[30px] h-[30px]" />
+          <FaInstagram className={styles.icon} />
         </Link>
         <Link href={""}>
-          <FaTwitter className="w-[30px] h-[30px]" />
+          <FaTwitter className={styles.icon} />
         </Link>
         <Link href={""}>
-          <FaLinkedin className="w-[30px] h-[30px]" />
+          <FaLinkedin className={styles.icon} />
         </Link>
       </div>
-      <p className={`${heebo.className} text-center font-medium text-[22px]`}>
+      <p className={`${heebo.className} ${styles.copyrightText}`}>
         Copyright 2024 All rights reserved
       </p>
     </div>

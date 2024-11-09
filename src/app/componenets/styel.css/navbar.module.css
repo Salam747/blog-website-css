@@ -1,0 +1,47 @@
+/* Navbar container */
+.navbar {
+    background-color: #f6f0f0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+  }
+  
+  /* Navbar list */
+  .navList {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar item */
+  .navItem {
+    position: relative;
+  }
+  
+  /* Navbar link */
+  .navLink {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem;
+    }
+  
+    .navList {
+      flex-direction: row;
+      margin:0 auto;
+      gap: 1rem;
+    }
+  }
+  
